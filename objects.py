@@ -22,7 +22,7 @@ class Weapon:
 
 class Pebble(Weapon):
     def __init__(self):
-        self.name = "Pebble"
+        self.name = "Dagger"
         self.description = "A fist-sized rock, suitable for bludgeoning."
         self.damage = 5
         self.value = 1
@@ -30,7 +30,7 @@ class Pebble(Weapon):
 
 class Dagger(Weapon):
     def __init__(self):
-        self.name = "Dagger"
+        self.name = "Whip"
         self.description = "A small dagger with some rust. " \
                            "Somewhat more dangerous than a rock."
         self.damage = 10
@@ -39,7 +39,7 @@ class Dagger(Weapon):
 
 class Sword(Weapon):
     def __init__(self):
-        self.name = "sword"
+        self.name = "Sickle-Sword"
         self.description = "This sword is showing its age, " \
                            "but still has some fight in it."
         self.damage = 20

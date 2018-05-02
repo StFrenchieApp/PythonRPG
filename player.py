@@ -9,7 +9,7 @@ class Player:
                           objects.Apple()]
         self.x = map.start_tile_location[0]
         self.y = map.start_tile_location[1]
-        self.hp = 1000 
+        self.hp = 100 
         self.gold = 5
         self.victory = False
 
@@ -116,29 +116,29 @@ class Enemy:
 
 class Easy(Enemy):
     def __init__(self):
-        self.name = "Spider"
+        self.name = "Skeleton"
         self.hp = 10
         self.damage = 2
 
 
 class Medium(Enemy):
     def __init__(self):
-        self.name = "Ogre"
-        self.hp = 100
+        self.name = "Colony of scarabs"
+        self.hp = 20
         self.damage = 6
 
 
 class Hard(Enemy):
     def __init__(self):
-        self.name = "Colony of bats"
-        self.hp = 30
+        self.name = "Mummy"
+        self.hp = 40
         self.damage = 4
 
 
 class Boss(Enemy):
     def __init__(self):
-        self.name = "Rock Monster"
+        self.name = "Anubis"
         self.hp = 80
-        self.damage = 15
+        self.damage = 10
 
 

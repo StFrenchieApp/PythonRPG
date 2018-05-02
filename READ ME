@@ -1,0 +1,109 @@
+﻿Python RPG!
+
+A game where the objective is to escape the maze while avoiding being killed
+
+Rubric Grading
+#################
+Map
+1pt - basic rooms and descriptions, essentially the exact same features as the original project required. At least 10 room with names and descriptions
+Over 10 rooms with description’s 
+1
+
++1pt - rooms can have characters/monsters in them (you can only claim this point if it is possible to interact with them)
+NPC’s and Monsters, you can attack, die, trade with NPC’s
+1 + 1
+2
++1pt - rooms can have items/objects (you can only claim this point if it is possible to interact with them)
+Pick up random gold found on the ground
+2 + 1
+3
++1pt - your map can change as you play (in response to events or player actions)
+A room changes after a monster has died in it
+3 + 1
+4
++1pt - your map is randomly or procedurally generated
+Procedurally generated
+4 + 1 
+5
++2pts - you have a "map" command that prints an ASCII diagram visualizing your map. Only +1 point if this diagram is hard-coded.
+Print map is hard coded
+5 + 1
+6
+Characters
++1pt - your character has a name, visual description, and commands for accessing those
+Characters have names, eye colors, and hair color, can be printed by looking in the mirror with m command
+6 + 1 
+7
++1pt - there are other characters in the world with whom the player can interact
+NPC’s
+7 + 1
+8
++1pt - your character has statistics for certain tasks/skills (like combat, spotting hidden things, creating items, etc...)
++1pt - there is a mechanism for improving your character's statistics (experience points, improvement with use, etc...)
+Monsters
++1pt - there are entities that are aggressive to the player. This point can only be claimed if they pose a legitimate threat. They must be able to harm the player. They may be implemented as a type of "Character" if you so choose.
+Combat
+Monsters that can kill player (happens often depending on what monster...)
+8 + 1 
+9
+1pt - if the player has the ability to fight using simple mechanics like random numbers to see whether they win
+2pts - if the player has multiple options/strategies available that make combat interesting and dynamic
+Different strategies when it comes to when to use health potion vs attack (makes bigger difference than youd think)
+9 + 2
+11
+3pts - if the player has many options at their disposal and can tell the difference between them (previewing how different options will play out before the player has to choose)
+Suggestions for making combat interesting: make different weapons matter, create mechanics for armor or other defenses, introduce magic, etc...
++1pt - if the player gains/loses something from fighting. Maybe their weapons get closer to breaking but they gain money/experience/etc...?
+Objects
+1pt - There are objects in the world that can be picked up, dropped, and used.
+Gold 
+11 + 1
+12
+2pts - Weapon/armor/clothing mechanics where items can be used to modify game statistics or skills
+Weapons that increase attack
+12 + 2 
+14
++1pt - Player can collect raw materials and create items from them
++1pt - Other characters/monsters also use items
++1pt - Player has limits on how many things they can carry based on quantity, weight, or some other factor.
+Gameplay
+1pt - Game has an end, preferably a "win" and "lose" condition.
+Plot
+0pts - player is dropped in a maze of rooms with no direction
+1pt - player has a definite goal that is explained at the beginning and that they can achieve
+2pts - player has a definite goal with antagonists and allies (monsters and friendly characters) that can help or hinder them.
+Goal is to finish the maze, NPC’s can help while monsters make it harder
+14 + 2
+16
++2pts - player has branching choices leading to different outcomes for both themselves and their friends/enemies
++n pts - Implement puzzles in your game. These can take many forms, so explore other games and borrow ideas. Each sophisticated puzzle will be worth a point, so you can get many points from this category.
++1pt - Game has a score and tracks high scores
++2pts - Game saves a file to the hard drive so that you can stop playing but resume where you left off later. This file should include things like where they were, their stats, their inventory (if any), etc...
+Technical:
++0.5pts - Use a stack somewhere in your code (for something that actually makes sense with a stack, don't just throw one in randomly)
++0.5pts - Use a queue somewhere in your code (for something that actually makes sense with a queue, don't just throw one in randomly)
++0.5pts - Use recursion somewhere in your code (for something that makes sense to do recursively)
++0.5pts - Use a map/dictionary/HashMap (in Go/Python/Java, respectively)
+
+16 + .5 
+16
++0.5pts [Java only] - Use generics
++0.5pts [Python only] - Use list comprehension
++0.5pts [Go only] - Use interfaces
+
+
+
+
+Overall 16.5 pts
+1.25x Git
+1.25x Python
+
+1.5625 * 16.5 = 25.78125
+
+Sources used :
+https://letstalkdata.com/2014/08/how-to-write-a-text-adventure-in-python-part-2-the-world-space/
+
+Books :
+Python cook book
+
+

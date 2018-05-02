@@ -26,25 +26,22 @@ class EnemyTile(MapTile):
         r = random.random()
         if r < 0.50:
             self.enemy = player.Easy()
-            self.alive_text = "A giant spider jumps down from " \
-                              "its web in front of you!"
-            self.dead_text = "The corpse of a dead spider " \
+            self.alive_text = "A skeleton comes from underground " \
+                              "its bones jangle infront of you"
+            self.dead_text = "The skeleton stopped moving as he " \
                              "rots on the ground."
         elif r < 0.80:
             self.enemy = player.Medium()
-            self.alive_text = "An ogre is blocking your path!"
-            self.dead_text = "A dead ogre reminds you of your triumph."
+            self.alive_text = "A pack of scarabs block your path!"
+            self.dead_text = "The scarabs litter the ground with their corpses."
         elif r < 0.95:
             self.enemy = player.Hard()
-            self.alive_text = "You hear a squeaking noise growing louder" \
-                              "...suddenly you are lost in s swarm of bats!"
-            self.dead_text = "Dozens of dead bats are scattered on the ground."
+            self.alive_text = "A sarcophagus opens and a mummy appears!"
+            self.dead_text = "All thats left are the bandages..."
         else:
             self.enemy = player.Boss()
-            self.alive_text = "You've disturbed a rock monster " \
-                              "from his slumber!"
-            self.dead_text = "Defeated, the monster has reverted " \
-                             "into an ordinary rock."
+            self.alive_text = "You disturbed Anubis!"
+            self.dead_text = "Anubis ran away"
 
         super().__init__(x, y)
 
@@ -64,7 +61,7 @@ class VictoryTile(MapTile):
         player.victory = True
 
     def intro_text(self):
-        return "You won with a score of " #Finish later
+        return "You won with a score of (will be implementing later)" #Finish later
 
 class BossTile(MapTile):
     def __init__(self, x, y):
@@ -100,11 +97,11 @@ class FindGoldTile(MapTile):
     def intro_text(self):
         if self.gold_claimed:
             return """
-            Another unremarkable part of the cave. You must forge onwards.
+            Another boring part of the cave. You must move onwards.
             """
         else:
             return """
-            Someone dropped some gold. You pick it up.
+            Something dropped some gold... You pick it up.
             """
 
 

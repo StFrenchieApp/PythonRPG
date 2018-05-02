@@ -1,10 +1,19 @@
-import os
+import sys
 from collections import OrderedDict
 from player import Player
 import player
 import map
 
 user_n = input("What is your name?: ")
+user_e = input("What color are your eyes?: ")
+user_h = input("What color is your hair?: ")
+
+def mir():
+        print("I can see my pefect {} eyes and flawless {} hair".format(user_e, user_h))
+
+def quit():
+    sys.exit()
+
 
 def print_map():
         print("EN = enemy, VT = victory, FG = gold, TT = trade")
@@ -19,7 +28,7 @@ def clear():
 
 def play():
 
-    print("{} you must escape from the maze".format(user_n))
+    print("{} you must escape from the pyramid".format(user_n))
     map.parse_world_dsl()
     player = Player()
     while player.is_alive() and not player.victory:
@@ -49,15 +58,19 @@ def get_available_actions(room, player):
     print("Choose an action: ")
     ran = 1
     if ran == 1:
-        action_adder(actions, 'p', print_map, "Print map (for cheaters)")
-    if ran == 1:
-        action_adder(actions, 'c', clear, "Clear the screen")
+        action_adder(actions, 'm', mir, "Look at yourself")
     if player.inventory:
         action_adder(actions, 'i', player.print_inventory, "Inventory")
+    if ran == 1:
+        action_adder(actions, 'p', print_map, "Print map (for cheaters)")
     if isinstance(room, map.TraderTile):
         action_adder(actions, 't', player.trade, "Trade")
+    if ran == 1:
+        action_adder(actions, 'c', clear, "Clear the screen")
     if isinstance(room, map.EnemyTile) and room.enemy.is_alive():
         action_adder(actions, 'a', player.attack, "Attack")
+    if ran == 1:
+        action_adder(actions, 'q', quit, "quit without saving!")
     else:
         if map.tile_at(room.x, room.y - 1):
             action_adder(actions, 'n', player.move_north, "Move north")
